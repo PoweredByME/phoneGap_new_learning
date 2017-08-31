@@ -45,9 +45,8 @@ function getMessData(){
             var date = new Date();
             makeDate(date.getDate(),date.getDay(),date.getMonth(), date.getFullYear());
             todaysMeal(date, resp);
-            $('ul.tabs').tabs({
-            });
-            
+            $('ul.tabs').tabs();
+            $(".disclaimer").removeClass("hide");
             $(".theLoadScreen").addClass("hide");
         },
         error :  function(jqXHR, textStatus, errorThrown){
@@ -67,7 +66,7 @@ function makeMenu(list){
 
 function makeCol(line, num){
     var l = line.trim().split(",");
-    var str = "<div id=\"swipe-"+num+"\" style=\"heigth:auto\" class=\"col s12 white\">" + 
+    var str = "<div id=\"swipe-"+num+"\" style=\"heigth:auto;padding-top:10px;padding-bottom:20px;\" class=\"col s12 white\">" + 
         "<p>Breakfast</p><div class=\"divider\"></div>"  + 
                 "<h5>" + l[0] + "</h5>" + 
                 "<p>Lunch</p><div class=\"divider\"></div>" + 
