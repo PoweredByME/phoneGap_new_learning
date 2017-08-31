@@ -46,8 +46,6 @@ function getMessData(){
             makeDate(date.getDate(),date.getDay(),date.getMonth(), date.getFullYear());
             todaysMeal(date, resp);
             $('ul.tabs').tabs({
-            swipeable : true,
-            responsiveThreshold : 1920
             });
             
             $(".theLoadScreen").addClass("hide");
