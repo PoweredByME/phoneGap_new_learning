@@ -23,6 +23,8 @@ var app = {
 };
 
 
+
+
 function getMessData(){
     $.ajax({
         url : "http://" + serverName + "/massDMManager.php",
@@ -30,7 +32,7 @@ function getMessData(){
         data : "action=requestByApp",
         async : true, 
         success : function(resp){
-            $(".result-div").append(resp);
+            //$(".result-div").append(resp);
             $(".theLoadScreen").addClass("hide");
         },
         error :  function(jqXHR, textStatus, errorThrown){

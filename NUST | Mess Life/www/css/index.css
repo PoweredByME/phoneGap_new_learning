@@ -7,6 +7,7 @@ body {
     -webkit-text-size-adjust: none;             /* prevent webkit from resizing text to fit */
     -webkit-user-select: none;                  /* prevent copy paste, to allow, change 'none' to 'text' */
     -webkit-backface-visibility: hidden;
+    -webkit-overflow-scrolling: touch;
 }
 
 .the-body{
@@ -18,4 +19,24 @@ body {
 .body-no-scroll{
     overflow-y: hidden !important;
     -webkit-backface-visibility: hidden;
+}
+
+.nav-div{
+    width: 100%;
+    height: 56px;
+    background: #301934;
+    position: fixed;
+    top:0;
+    left:0;
+    z-index: 10;
+}
+
+.result-div{
+    margin: 0px;
+    padding: 0px;
+    margin-top: 56px;
+    background: #301934;
+    padding: 20px;
+    padding-top:50px;
+    padding-bottom:40px;
 }
