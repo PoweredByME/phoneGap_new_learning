@@ -18,6 +18,16 @@ var app = {
     // function, we must explicitly call 'app.receivedEvent(...);'
     onDeviceReady: function() {
         getMessData();
+        getFeaturedEvent();
+          $(".button-collapse").sideNav();
+  $('.button-collapse').sideNav({
+      menuWidth: 300, // Default is 300
+      edge: 'left', // Choose the horizontal origin
+      closeOnClick: true, // Closes side-nav on <a> clicks, useful for Angular/Meteor
+      draggable: true // Choose whether you can drag to open on touch screens,
+    }
+  );
+    
     },
     
 };
@@ -171,4 +181,29 @@ function makeDate(dateNum ,dayNum, monthNum, yearNum){
     var str = day + " - " + month + " " + dateNum + ", " + yearNum;
     $(".date-para").empty();
     $(".date-para").append(str);
+}
+
+function getFeaturedEvent(){
+    $.ajax({
+        url : "http://" + serverName + "/featuredEventsDBManage.php", 
+        type : "post",
+        data : "action=requestByApp",
+        async : true,
+        success : function(resp){
+            console.log("dasdfasdasdfasds");
+            var l = resp.trim().split("\n");
+            $(".nav-bar-div").append("<li><div class=\"divider\"></div></li><li><a class=\"subheader\">Featured Events</a></li>");
+            for(var x in l){
+                var str = l[x].trim().split("≈");
+                $(".nav-bar-div").append("<li><a class=\"waves-effect\" target=\"_blank\" href=\""+str[1]+"\">"+str[0]+"</a></li>");
+            }
+            var str = "<li><div class=\"divider\"></div></li><li><a class=\"subheader\">Developer</a></li><li><a class=\"waves-effect\" href=\"https://www.facebook.com/profile.php?id=100005595785739\" target=\"_blank\">Saad Ahmad</a></li>"
+            $(".nav-bar-div").append(str);
+        },
+        error :  function(jqXHR, textStatus, errorThrown){
+            console.log(textStatus, errorThrown);
+            var str = "<li><div class=\"divider\"></div></li><li><a class=\"subheader\">Developer</a></li><li><a class=\"waves-effect\" href=\"https://www.facebook.com/profile.php?id=100005595785739\" target=\"_blank\">Saad Ahmad</a></li>"
+            $(".nav-bar-div").append(str);
+        }
+    });
 }
