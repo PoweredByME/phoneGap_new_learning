@@ -30,12 +30,11 @@ function getMessData(){
         data : "action=requestByApp",
         async : true, 
         success : function(resp){
-            console.log(resp);
+            $(".result-div").append(resp);
+            $(".theLoadScreen").addClass("hide");
         },
         error :  function(jqXHR, textStatus, errorThrown){
             console.log(textStatus, errorThrown);
         }
-    }
-        
     });
 }
