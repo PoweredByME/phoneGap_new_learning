@@ -32,13 +32,13 @@
     <title>NUST | Mess Life</title>
 </head>
 
-<body class="white the-body" style="padding:0px;margin:0px">
+<body class="orange the-body" style="padding:0px;margin:0px">
 
     
     <div class="theLoadScreen" style="overflow:hidden;height:100%;width:100%;padding:0px;margin:0px;position:absolute;top:0;left:0;z-index:1000;background-color:#301934;-webkit-backface-visibility: hidden;">
         <div class="valign-wrapper" style="position:relative !important;top:0;left:0;height:100%;width:100%;-webkit-backface-visibility: hidden;">
             <div class="container center white-text" style="">
-                <h5 style="font-weight:200">NUST | Mess Life</h5>
+                <h5 style="font-weight:300">NUST | Mess Life</h5>
                 <div style="padding:10px;">
                     <div class="preloader-wrapper small active content-loader">
                         <div class="spinner-layer spinner-blue-only">
@@ -52,9 +52,9 @@
                         </div>
                     </div>
                 </div>
-                <p style="font-weight:500" class="chip">Loading</p>
+                <p style="font-weight:500" class="chip loading-message">Loading</p>
             </div>
-            <div style="position:absolute !important;bottom:0;width:100%;padding:40px;-webkit-backface-visibility: hidden;" class="white-text">
+            <div style="position:absolute !important;bottom:0;width:100%;padding:40px;padding-left:20px;padding-right:20px;-webkit-backface-visibility: hidden;" class="white-text">
                 <div class="container center">
                     <div style="display:flex;flex-direction:column;align-items:center">
                         <div class="valign-wrapper">
@@ -70,29 +70,45 @@
     <div class="nav-div z-depth-2">
         <div class="valign-wrapper" style="height:100%">
             <p class="white-text" style="padding:0px;margin:0px;font-weight:200;font-size:18px;margin-left:20px;">
-                    NUST | Mess Info
+                    NUST | Mess Life
             </p>
         </div>
     </div>
     
     <div class="result-div">
-        <p class="chip orange" style="color:white;font-weight:200">
-            Dinner - 07:30pm to 09:00pm
-        </p>    
-        <h5 class="white-text hide-on-large-only" style="font-weight:300">
-            White Rice <br>
-            Pickle <br>
-            Daal Mong/ Daal Masoor <br>
-        </h5>
-        <h4 class="white-text hide-on-med-and-down"  style="font-weight:300">
-            White Rice <br>
-            Pickle <br>
-            Daal Mong/ Daal Masoor
-        </h4>
-        <p style="color:white;font-weight:200">
-            Dinner - 07:30pm to 09:00pm
-        </p>  
+        <p class="chip orange next-meal-time" style="color:white;font-weight:300"></p>    
+        <h5 class="white-text hide-on-large-only current-meal" style="font-weight:300"></h5>
+        <h4 class="white-text hide-on-med-and-down current-meal"  style="font-weight:300"></h4>
+        <p style="color:white;font-weight:200" class="date-para"></p>  
     </div>
+    
+    
+    
+    
+    <div style="margin-top:-5px">
+        <div class="row the-mess-menu">
+            <ul id="tabs-swipe-demo" class="tabs" style="background-color:#301934">
+                <li class="tab col s4 white-text"><a class="active"  href="#swipe-1">Monday</a></li>
+                <li class="tab col s4 white-text"><a class="" href="#swipe-2">Tuesday</a></li>
+                <li class="tab col s4 white-text"><a class="" href="#swipe-3">Wednesday</a></li>
+                <li class="tab col s4 white-text"><a class="" href="#swipe-4">Thursday</a></li>
+                <li class="tab col s4 white-text"><a class="" href="#swipe-5">Friday</a></li>
+                <li class="tab col s4 white-text"><a class="" href="#swipe-6">Saturday</a></li>
+                <li class="tab col s4 white-text"><a class="" href="#swipe-7">Sunday</a></li>
+            </ul>
+            </div>
+    </div>
+    
+    
+    <div class="disclaimer orange center white-text" style="padding:10px;margin-top:0px;">
+        <p >
+            HOLIDAYS MESS TIMING
+            <br>
+            Breakfast - 09:00am to 10:30am<br>
+            Lunch - 02:00pm to 3:30pm
+        </p>
+    </div>
+    
     
     <script type="text/javascript" src="cordova.js"></script>
     <script type="text/javascript" src="theWebAPI/jQuery.min.js"></script>

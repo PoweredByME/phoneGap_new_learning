@@ -34,9 +34,25 @@ body {
 .result-div{
     margin: 0px;
     padding: 0px;
-    margin-top: 56px;
+    margin-top: 50px;
     background: #301934;
     padding: 20px;
     padding-top:50px;
     padding-bottom:40px;
+}
+
+.carousel .carousel-item{
+    width:100vw;
+    height: 400px !important;
+    overflow-y: auto;
+}
+.tabs .indicator {
+    background-color: orange !important;
+}
+.tab{
+    border-color: #ffffff !important;
+}
+.tab a{
+    color : #ffffff !important;
+    font-weight: 300;
 }
