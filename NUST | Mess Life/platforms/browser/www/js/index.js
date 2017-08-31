@@ -1,3 +1,5 @@
+var serverName = "nustfineartsclub.com/mess";
+
 var app = {
 
     initialize: function() {
@@ -15,7 +17,25 @@ var app = {
     // The scope of 'this' is the event. In order to call the 'receivedEvent'
     // function, we must explicitly call 'app.receivedEvent(...);'
     onDeviceReady: function() {
-        
+        getMessData();
     },
     
 };
+
+
+function getMessData(){
+    $.ajax({
+        url : "http://" + serverName + "/massDMManager.php",
+        type : "post",
+        data : "action=requestByApp",
+        async : true, 
+        success : function(resp){
+            console.log(resp);
+        },
+        error :  function(jqXHR, textStatus, errorThrown){
+            console.log(textStatus, errorThrown);
+        }
+    }
+        
+    });
+}
