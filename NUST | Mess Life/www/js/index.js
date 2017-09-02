@@ -20,6 +20,7 @@ var app = {
         getMessData();
         getFeaturedEvent();
           $(".button-collapse").sideNav();
+         $('.collapsible').collapsible();
   $('.button-collapse').sideNav({
       menuWidth: 300, // Default is 300
       edge: 'left', // Choose the horizontal origin

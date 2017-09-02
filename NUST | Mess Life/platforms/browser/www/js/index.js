@@ -20,6 +20,7 @@ var app = {
         getMessData();
         getFeaturedEvent();
           $(".button-collapse").sideNav();
+         $('.collapsible').collapsible();
   $('.button-collapse').sideNav({
       menuWidth: 300, // Default is 300
       edge: 'left', // Choose the horizontal origin
@@ -134,8 +135,12 @@ function nextMeal(todaysMeals, nextDayMeal){
                 showMeal(l[0]);
             }else if(now < lunch){
                 $(".next-meal-time").empty();
-                $(".next-meal-time").append("Lunch - " + lunch_time);
-                showMeal(l[1]);
+		if(tday == 5){
+			$(".next-meal-time").append("Lunch - " + lunch_time_holidays);
+		}else{
+                	$(".next-meal-time").append("Lunch - " + lunch_time);
+                }
+		showMeal(l[1]);
             }else{
                 $(".next-meal-time").empty();
                 $(".next-meal-time").append("Dinner - " + dinner_time);
