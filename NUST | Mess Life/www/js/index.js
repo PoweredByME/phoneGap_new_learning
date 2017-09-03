@@ -64,6 +64,11 @@ function getMessData(){
             console.log(textStatus, errorThrown);
             $(".loading-message").empty();
             $(".loading-message").append("Cannot Connect to Server");
+	    setTimeout(function(){
+		$(".loading-message").empty();
+            	$(".loading-message").append("Trying again...");
+		app.onDeviceReady();
+	    },2000);
         }
     });
 }
