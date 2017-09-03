@@ -212,8 +212,8 @@ function getFeaturedEvent(){
         },
         error :  function(jqXHR, textStatus, errorThrown){
             console.log(textStatus, errorThrown);
-            var str = "<li><div class=\"divider\"></div></li><li><a class=\"subheader\">Developer</a></li><li><a class=\"waves-effect\" href=\"https://www.facebook.com/profile.php?id=100005595785739\" target=\"_blank\">Saad Ahmad</a></li>"
-            $(".nav-bar-div").append(str);
+            //var str = "<li><div class=\"divider\"></div></li><li><a class=\"subheader\">Developer</a></li><li><a class=\"waves-effect\" href=\"https://www.facebook.com/profile.php?id=100005595785739\" target=\"_blank\">Saad Ahmad</a></li>"
+            //$(".nav-bar-div").append(str);
         }
     });
 }
