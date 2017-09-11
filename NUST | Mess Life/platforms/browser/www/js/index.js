@@ -64,6 +64,11 @@ function getMessData(){
             console.log(textStatus, errorThrown);
             $(".loading-message").empty();
             $(".loading-message").append("Cannot Connect to Server");
+	    setTimeout(function(){
+		$(".loading-message").empty();
+            	$(".loading-message").append("Trying again...");
+		app.onDeviceReady();
+	    },2000);
         }
     });
 }
@@ -207,8 +212,8 @@ function getFeaturedEvent(){
         },
         error :  function(jqXHR, textStatus, errorThrown){
             console.log(textStatus, errorThrown);
-            var str = "<li><div class=\"divider\"></div></li><li><a class=\"subheader\">Developer</a></li><li><a class=\"waves-effect\" href=\"https://www.facebook.com/profile.php?id=100005595785739\" target=\"_blank\">Saad Ahmad</a></li>"
-            $(".nav-bar-div").append(str);
+            //var str = "<li><div class=\"divider\"></div></li><li><a class=\"subheader\">Developer</a></li><li><a class=\"waves-effect\" href=\"https://www.facebook.com/profile.php?id=100005595785739\" target=\"_blank\">Saad Ahmad</a></li>"
+            //$(".nav-bar-div").append(str);
         }
     });
 }
