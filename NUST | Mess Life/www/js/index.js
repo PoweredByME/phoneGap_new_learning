@@ -34,12 +34,12 @@ var app = {
 };
 
 
-var breakfast = (new Date()).setHours(10,00,0,0);
+var breakfast = (new Date()).setHours(9,30,0,0);
 var lunch = (new Date()).setHours(15, 30,0,0);
 var dinner = (new Date()).setHours(21,30,0,0);
 var breakfast_holiday = (new Date()).setHours(10,30,0,0);
 
-var breakfast_time = "07:45am to 10:00am";
+var breakfast_time = "07:30am to 09:30am";
 var lunch_time = "01:00pm to 03:30pm";
 var dinner_time = "07:30pm to 09:30pm";
 var lunch_time_holidays = "02:00pm to 03:30pm";
